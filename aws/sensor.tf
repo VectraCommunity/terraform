@@ -1,17 +1,8 @@
 provider "aws" {
   region  = var.region
-  profile = "sample_dev"
+  profile = "sample"
 }
 
-resource "aws_vpc" "sample-vpc" {
-  cidr_block           = "10.0.0.0/16"
-  enable_dns_support   = true
-  enable_dns_hostnames = true
-}
-resource "aws_subnet" "sample-subnet" {
-  vpc_id     = aws_vpc.sample-vpc.id
-  cidr_block = "10.0.1.0/24"
-}
 
 resource "aws_cloudformation_stack" "sensor_stack" {
   name = "sensor-stack"
@@ -21,18 +12,16 @@ resource "aws_cloudformation_stack" "sensor_stack" {
     instanceType      = var.instanceType
     mgtPrivateIP      = var.mgtPrivateIP
     mgtSecurityGroup  = var.mgtSecurityGroup
-    mgtSubnet         = aws_subnet.sample-subnet.id
-    mgtVpc            = aws_vpc.sample-vpc.id
+    mgtSubnet         = var.mgtSubnet
+    mgtVpc            = var.mgtVpc
     networkLB         = var.networkLB
     registrationToken = var.registrationToken
     sshKey            = var.sshKey
     tenancy           = var.tenancy
     trafficPrivateIP  = var.trafficPrivateIP
     trafficSecurityGroup = var.trafficSecurityGroup
-    trafficSubnet     = aws_subnet.sample-subnet.id
-    trafficVpc        = aws_vpc.sample-vpc.id
-    
-    
+    trafficSubnet     = var.trafficSubnet
+    trafficVpc        = var.trafficVpc
   }
 
   template_url = var.templateURL
