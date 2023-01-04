@@ -2,10 +2,6 @@ variable "region" {
     type = string
 }
 
-variable "vpc_cidr_range" {
-    type = string
-}
-
 variable "baseName" {
     type = string
 }
@@ -51,5 +47,21 @@ variable "trafficPrivateIP" {
 }
 
 variable "trafficSecurityGroup" {
+    type = string
+}
+
+variable "mgtSubnet" {
+    type = string
+}
+
+variable "mgtVpc" {
+    type = string
+}
+
+variable "trafficSubnet" {
+    type = string
+}
+
+variable "trafficVpc" {
     type = string
 }
