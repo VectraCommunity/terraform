@@ -16,7 +16,7 @@ provider "restapi" {
   alias               = "restapi_headers"
   uri                 = var.BrainURI
   headers =  {
-    Authorization     = var.APIauth 
+    Authorization     = "Token ${var.APIauth}"
   }
   insecure = true
   write_returns_object = true
