@@ -18,6 +18,6 @@ trafficVpc = "vpc-DDDD"
 templateSensor = "https://s3.amazonaws.com/awsmp-fulfillment-cf-templates-prod/a94aa1e6-cb82-42c6-89de-b9309ef5c6e1.c0067ec9-a080-4021-7589-c580c626eca7.template"
 templateNLB = "https://cognito-public-deployment-tools.s3.us-west-2.amazonaws.com/AwsSensor/6.15/loadBalancerTemplate.json"
 
-APIauth = "Token ccweewr5fdcerfcwcb70186c156d876a637"
+APIauth = "ccweewr5fdcerfcwcb70186c156d876a637"
 AWSprofile = "test"
 BrainURI = "https://192.168.1.100/"
