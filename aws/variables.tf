@@ -30,7 +30,11 @@ variable "sshKey" {
     type = string
 }
 
-variable "templateURL" {
+variable "templateSensor" {
+    type = string
+}
+
+variable "templateNLB" {
     type = string
 }
 
@@ -63,5 +67,17 @@ variable "trafficSubnet" {
 }
 
 variable "trafficVpc" {
+    type = string
+}
+
+variable "APIauth" {
+    type = string
+}
+
+variable "AWSprofile" {
+    type = string
+}
+
+variable "BrainURI" {
     type = string
 }
