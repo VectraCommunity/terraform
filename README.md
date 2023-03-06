@@ -28,4 +28,4 @@ aws configure --profile <NAME>
 export AWS_PROFILE=<NAME>
 
 ## Get API token from Vectra Brain
-Vectra uses a token to for API authentication.  Log into the Brain, go to “My Profile” and you can either copy the existing token or create one if one doesn’t exist.  Careful if one exists as something may already be using it.  You will NOT want to generate a new token in that case as it will overwrite the existing.  Once you have a token you want to assign it in the terraform.tfvars (APIauth).  You only need to create this authorization token once.
+Vectra uses a token for API authentication.  Log into the Brain, go to “My Profile” and you can either copy the existing token or create one if one doesn’t exist.  Careful if one exists as something may already be using it.  You will NOT want to generate a new token in that case as it will overwrite the existing.  Once you have a token you want to assign it in the terraform.tfvars (APIauth).  You only need to create this authorization token once.
